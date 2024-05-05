@@ -1,0 +1,19 @@
+{
+    "name": "calendarevents/inc",
+    "description": "Calendar Events is a event management WordPress plugin.",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Calendarevents\\Inc\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mehediwebdev",
+            "email": "mehedi.webdoc@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
