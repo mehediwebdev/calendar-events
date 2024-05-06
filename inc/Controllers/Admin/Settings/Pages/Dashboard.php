@@ -4,11 +4,11 @@
  */
 
  namespace Calendarevents\Inc\Controllers\Admin\Settings\Pages;
-//use \Calendarevents\Inc\Base\BaseController;
-//use \Calendarevents\Inc;
-//use \Calendarevents\Inc\Base\Enqueue;
+ use \Calendarevents\Inc\Base\BaseController;
+use \Calendarevents\Inc;
+use \Calendarevents\Inc\Base\Enqueue;
 
-class Dashboard {
+class Dashboard extends Enqueue {
     public function register() {
         add_action('admin_menu', [ $this, 'wph_event_add_dashboard_page'] );
     }
@@ -28,7 +28,7 @@ class Dashboard {
     public function wph_event_dashboard_page() {
         echo '<div class="wrap">
         <div id="wpebcalender_root">
-            <div id="calendar"></div>
+            <div id="calendar"></div>          
         </div>
     </div>'; ?>
 

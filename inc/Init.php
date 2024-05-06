@@ -27,6 +27,7 @@ final class Init {
          Base\Enqueue::class,
          Controllers\Admin\Models\Columns\AdminColumn::class,
          Controllers\Admin\Settings\Pages\Dashboard::class,
+         Controllers\Hooks\TemplateLoader\EventsTemplates::class,
         ];
     }
 
