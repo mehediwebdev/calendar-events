@@ -4,11 +4,11 @@
  */
 
  namespace Calendarevents\Inc\Controllers\Admin\Settings\Pages;
- use \Calendarevents\Inc\Base\BaseController;
-use \Calendarevents\Inc;
-use \Calendarevents\Inc\Base\Enqueue;
+ //use \Calendarevents\Inc\Base\BaseController;
+//use \Calendarevents\Inc;
+//use \Calendarevents\Inc\Base\Enqueue;
 
-class Dashboard extends Enqueue {
+class Dashboard{
     public function register() {
         add_action('admin_menu', [ $this, 'wph_event_add_dashboard_page'] );
     }
@@ -24,11 +24,12 @@ class Dashboard extends Enqueue {
             [ $this, 'wph_event_dashboard_page'] // Function to display the page
         );
     }
-   
+  
     public function wph_event_dashboard_page() {
         echo '<div class="wrap">
         <div id="wpebcalender_root">
-            <div id="calendar"></div>          
+           
+             <div id="calendar"></div>          
         </div>
     </div>'; ?>
 
@@ -51,6 +52,8 @@ class Dashboard extends Enqueue {
                             'post_type' => 'wph-event',
                             'posts_per_page' => -1,
                         );
+
+                   
                         $events_query = new \WP_Query($args);
                         if ($events_query->have_posts()) {
                             while ($events_query->have_posts()) {

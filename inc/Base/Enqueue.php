@@ -19,13 +19,22 @@ class Enqueue extends BaseController{
         $_screen=get_current_screen();
 
         wp_enqueue_style('calendar-events-main-admin-style', $this->plugin_url. 'assets/admin/css/admin-style.css',array(),self::$plugin_version);
+
+
 		wp_enqueue_style('calendar-events-ui-css', $this->plugin_url. 'assets/vendor/jquery-ui.css',array(),self::$plugin_version);
 
-        wp_enqueue_script('calendar-events-main-admin-script', $this->plugin_url. 'assets/admin/js/main-admin-js.js',array('jquery'),self::$plugin_version,true);
+     
 
 		wp_enqueue_script('calendar-events-js-ui-script', $this->plugin_url. 'assets/vendor/jquery-ui.js',array('jquery'),self::$plugin_version,true);
 
+     
+       
+
         wp_enqueue_script('calendar-events-dashboard-script', $this->plugin_url. 'assets/vendor/index.global.js',array('jquery'),self::$plugin_version,true);
+
+        
+        wp_enqueue_script('calendar-events-main-admin-script', $this->plugin_url. 'assets/admin/js/main-admin-js.js',array('jquery'),self::$plugin_version,true);
+
 
     }
 
